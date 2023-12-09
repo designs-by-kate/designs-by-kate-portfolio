@@ -69,7 +69,7 @@ nav a{
 }
 
 nav a:hover{
-  color: var(--contrast-color);
+  color: var(--dark-color);
 }
 
 .hero-banner{
@@ -137,8 +137,8 @@ main{
   margin-right: 5px;
 }
 
-#about p{
-  max-width: 800px;
+#about h3, #about p{
+  max-width: 1000px;
   margin: 0 auto;
   line-height: 1.6;
   color: var(--light-color);
@@ -230,4 +230,141 @@ main{
   margin: 0;
   padding: 10px;
   color: var(--dark-color);
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for tablet screens */
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 24px;
+  }
+
+  .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-banner img {
+    margin-left: 0;
+  }
+
+  .hero-banner h2 {
+    font-size: 24px;
+  }
+
+  .hero-banner p {
+    font-size: 18px;
+  }
+
+  #about h2,
+  #work h2,
+  #values h2,
+  #experience h2 {
+    font-size: 24px;
+  }
+
+  #about h3{
+    font-size: 16px;
+  }
+
+  #about p{
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  .work-item,
+  .values-item {
+    width: calc(50% - 20px);
+  }
+
+  .work-item img,
+  .values-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjust styles for phone screens */
+  .logo{
+    display: none;
+  }
+
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .hero-banner {
+    padding: 10px;
+  }
+
+  .hero-banner h2 {
+    font-size: 20px;
+  }
+
+  .hero-banner p {
+    font-size: 16px;
+  }
+
+  #about h2,
+  #work h2,
+  #values h2,
+  #experience h2 {
+    font-size: 20px;
+  }
+  #about h3{
+    font-size: 16px;
+  }
+
+  #about p{
+    display: none;
+  }
+
+  .work-item,
+  .values-item {
+    width: 100%;
+  }
+
+  .work-item img,
+  .values-item img {
+    width: 100%;
+    height: auto;
+  }
 }

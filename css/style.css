@@ -1,0 +1,233 @@
+:root{
+  --very-dark-color: #536456;
+  --dark-color: #0d0e0d;
+  --main-color: #323336;
+  --light-color: #f7fcfa;
+  --base-color: #e6eee4;
+  --contrast-color: #bd1e1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  background-color: var(--base-color);
+  color: var(--main-color);
+  padding: 20px 0;
+  margin: 10px;
+}
+
+.logo{
+  max-width: 200px;
+}
+
+h1{
+  margin: 0;
+  font-size: 80px;
+}
+
+nav {
+  background-color: var(--contrast-color);
+  color: var(--base-color);
+  padding: 10px;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li{
+  margin-right: 20px;
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--light-color);
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  transition: color 0.3s ease; /*Add smooth color transition effect*/
+}
+
+nav a:hover{
+  color: var(--contrast-color);
+}
+
+.hero-banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  background-image: url(../images/kate3-bw.jpg);
+  color: var(--dark-color);
+  padding: 40px;
+  margin: 10px;
+}
+
+.hero-banner div {
+  flex: 1; /*Make each child element take up equal horizontal space */
+}
+
+.hero-banner img {
+  max-width: 30%;
+  border-radius: 50%;
+  margin-left: 20px; /*adjusting spacing between text and image */
+}
+
+.hero-banner h2{
+  color: var(--contrast-color);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-banner p{
+  color: var(--main-color);
+  font-size: 30px;
+}
+
+main{
+  margin: 10px;
+}
+
+#about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: var(--main-color);
+}
+
+#about h2{
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: var(--base-color);
+  color: var(--dark-color);
+}
+
+#about div{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+#about img{
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10%;
+  margin-right: 5px;
+}
+
+#about p{
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--light-color);
+  font-size: 20px;
+}
+
+#work, #values{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base-color);
+  color: var(--dark-color);
+  text-align: center;
+  padding: 40px 0;
+}
+
+#work h2, #values h2{
+  width: 100%;
+  background-color: var(--base-color);
+  color: var(--dark-color);
+  border-bottom: 2px solid var(--contrast-color);
+  margin-bottom: 20px;
+}
+
+.work-container, .values-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.work-item, .values-item{
+  width: calc(25% - 20px); /*set width for each work item, considering margin */
+  margin:  0 10px 20px 10px;
+  display: inline-block; /*display work item in a row */
+  vertical-align: top; /*align work items to the to of the container */
+}
+
+.work-item img, .values-item img{
+  max-width: 100%; /* ensure the image doesn't exceed the width of its container */
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.work-item p, .values-item p{
+  margin-top: 10px;
+}
+
+#experience {
+  background-color: var(--main-color);
+  color: var(--base-color);
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+#experience h2 {
+  width: 100%;
+  border-bottom: 2px solid var(--dark-color);
+  margin-bottom: 20px;
+}
+
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.experience-item {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make the container rounded */
+  overflow: hidden; /* Hide content overflow for rounded effect */
+  margin: 10px;
+  position: relative;
+  flex: 0 0 auto; /* Ensure items don't grow to fill the space */
+}
+
+.experience-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio for images */
+}
+
+.experience-item p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for text */
+  margin: 0;
+  padding: 10px;
+  color: var(--dark-color);
+}

@@ -388,10 +388,7 @@ h2{
     font-size: 18px;
   }
 
-  #about h2,
-  #work h2,
-  #values h2,
-  #experience h2 {
+  h2 {
     font-size: 24px;
   }
 
@@ -408,13 +405,12 @@ h2{
     overflow: hidden; /* Hide overflowing content */
   }
 
-  .work-item,
   .values-item {
     width: calc(50% - 20px);
   }
 
-  .work-item img,
-  .values-item img {
+  .values-item img,
+  .frame{
     width: 100%;
     height: auto;
   }
@@ -461,10 +457,7 @@ h2{
     font-size: 16px;
   }
 
-  #about h2,
-  #work h2,
-  #values h2,
-  #experience h2 {
+  h2 {
     font-size: 20px;
   }
   #about h3{
@@ -475,14 +468,39 @@ h2{
     display: none;
   }
 
-  .work-item,
+  #work-container{
+    margin: 0px 5%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "work1"
+        "work2"
+        "work3"
+        "work4"
+        "work5";
+  }
+
   .values-item {
     width: 100%;
   }
 
-  .work-item img,
   .values-item img {
     width: 100%;
     height: auto;
+  }
+
+  .project {
+    display: block; /* Change from flex to block */
+  }
+  .project img {
+    max-width: 100%;
+    width: 100%; /* Set image width to 100% */
+    margin-bottom: 10px; /* Add margin for spacing between image and text */
+    padding: 5px;
+  }
+  .project div {
+    text-align: center; /* Center the text */
   }
 }

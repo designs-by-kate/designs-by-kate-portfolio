@@ -117,11 +117,14 @@ main{
   background-color: var(--main-color);
 }
 
-#about h2, #contact h2{
+h2{
   width: 100%;
   margin-bottom: 20px;
   background-color: var(--base-color);
   color: var(--dark-color);
+  font-weight: bold;
+  font-size: 36px;
+  border-bottom: 5px solid var(--contrast-color);
 }
 
 #about div{
@@ -154,36 +157,62 @@ main{
   padding: 40px 0;
 }
 
-#work h2, #values h2{
+#work-container{
+  margin: 0px 5%;
   width: 100%;
-  background-color: var(--base-color);
-  color: var(--dark-color);
-  border-bottom: 2px solid var(--contrast-color);
+  display: grid;
+  grid-template-rows: 400px 200px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "work1 work1"
+      "work2 work3"
+      "work4 work5";
+}
+
+.work-item{
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+#work1{
+  grid-area: work1;
+  background-image: url(../images/chair.jpg);
+}
+
+#work2{
+  grid-area: work2;
+  background-image: url(../images/logodesign.png);
+}
+
+#work3{
+  grid-area: work3;
+  background-image: url(../images/menu.jpg);
+}
+
+#work4{
+  grid-area: work4;
+  background-image: url(../images/decorating.jpg);
+}
+
+#work5{
+  grid-area: work5;
+  background-image: url(../images/T-shirt.jpg);
+}
+
+.heading{
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
   margin-bottom: 20px;
-}
-
-.work-container, .values-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.work-item, .values-item{
-  width: calc(25% - 20px); /*set width for each work item, considering margin */
-  margin:  0 10px 20px 10px;
-  display: inline-block; /*display work item in a row */
-  vertical-align: top; /*align work items to the to of the container */
-}
-
-.work-item img, .values-item img{
-  max-width: 100%; /* ensure the image doesn't exceed the width of its container */
-  border-radius: 10px;
+  height: 75px;
   width: 200px;
-  height: 200px;
-}
-
-.work-item p, .values-item p{
-  margin-top: 10px;
+  color: var(--light-color);
+  font-size: 28px;
+  border-bottom: 5px solid var(--contrast-color);
 }
 
 #experience {
@@ -192,12 +221,6 @@ main{
   justify-content: center;
   text-align: center;
   padding: 40px 0;
-}
-
-#experience h2 {
-  width: 100%;
-  border-bottom: 2px solid var(--dark-color);
-  margin-bottom: 20px;
 }
 
 .experience-container {
@@ -232,6 +255,91 @@ main{
   color: var(--dark-color);
 }
 
+.values-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.values-item{
+  width: calc(25% - 20px); /*set width for each work item, considering margin */
+  margin:  0 10px 20px 10px;
+  display: inline-block; /*display work item in a row */
+  vertical-align: top; /*align work items to the to of the container */
+}
+
+.values-item img{
+  max-width: 100%; /* ensure the image doesn't exceed the width of its container */
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.frame {
+  width: 200px; /*set width for each work item, considering margin */
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid var(--very-dark-color);
+  padding: 10px; /* Optional: Add padding to provide space between text and frame border */
+  margin: auto;
+}
+
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: justify;
+  width: 100%;
+}
+
+.work-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: var(--main-color);
+}
+
+.work-details h2{
+  align-items: center;
+  text-align: center;
+}
+
+.project{
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.project img{
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.project div{
+  flex-grow: 1;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.work-details h3 {
+    margin: 10px; /* Remove default margin */
+    padding: 10px;
+    text-align: center;
+    background-color: var(--light-color);
+    font-size: 36px;
+}
+
+.work-details p {
+  margin: 10px; /* Remove default margin */
+  color: var(--light-color);
+  font-size: 24px;
+}
+
 #contact p{
   color: var(--light-color);
 }
@@ -239,6 +347,8 @@ main{
 #contact a{
   color: var(--base-color);
 }
+
+
 
 @media only screen and (max-width: 768px) {
   /* Adjust styles for tablet screens */
